@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Animations */
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+.fadeIn {
+	animation: fadeIn 0.5s;
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s;
+}
+
+/* elements */
+body {
+	overflow: visible;
+	margin: 0;
+	margin-top: 0;
+	background-color: #B6B6B6;
+}
+
+/* classes */
+.navBar {
+	background: #8a2be2;
+	color: #FFFFFF;
+	font-family: "Courier New", Courier, Monospace;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+
+/*.navBar a {
+	color: #ffffff;
+	font-family: cabin, sans-serif;
+	text-decoration: none;
+	text-transform: capitalize;
+}*/
+
+.navBar a:active{
+	color: #521987;
+}
+
+.navBar .dropdown {
+	display: inline-block;
+	position: relative;
+	align-items: center;
+}
+.navBar .dropdown:hover {
+	
+}
+
+.dropdown a:hover {
+	text-decoration: underline;
+}
+
+.dropdown:hover > .dropdownBttn {
+	background-color: #581497
+}
+
+.dropdownBttn {
+	padding: 10% 0%;
+	background-color: #8a2be2;
+	border: none;
+	min-width: 150px;
+}
+
+.dropdownBttn:hover {
+	background-color: #581497;
+}
+
+.dropdownBttn a {
+	color: #FFFFFF;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.navBar .dropdownContent {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	width: 75%;
+	position: absolute;
+	padding: 10px 16px;
+	background-color: #FFFFFF;
+	border-style: none solid solid;
+	border-width: medium;
+	border-color: #7F7F7F;
+	
+}
+
+.dropdownContent a {
+	display: block;
+	font-family: cabin, sans-serif;
+	color: #000000;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 8px 0px;
+	border-bottom: solid thin #7F7F7F;
+}
+
+.dropdownContent a:first-child {
+	padding: 4px 0px 8px;
+}
+
+.dropdownContent a:last-child {
+	border: none;
+	padding: 8px 0px 4px;
+	z-index: 999;
+}
+
+.dropdown:hover .dropdownContent {
+	display: flex;
+}
+
+.contentHeader {
+	margin: 0;
+	padding: 10%;
+	overflow: hidden;
+	max-width: 100%;
+	min-height: 50%;
+	position: relative;
+	z-index: 0;
+}
+
+.contentHeaderText {
+	text-align: center;
+	font-family: "Courier New", Courier, Monospace;
+	font-size: 2em;
+	color: #8a2be2;
+	position: relative;
+	width: 100%;
+	text-shadow: 
+		-2px -2px 0 #fff,
+		2px -2px 0 #fff,
+		-2px 2px 0 #fff,
+		2px 2px 0 #fff;
+	z-index: 2;
+}
+
+div.contentHeaderText p {
+	font-weight: bolder;
+	text-shadow: 
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+}
+
+.contentBody {
+	margin: 1% 12.5%;
+	padding: 0px 16px;
+	background-color: #FFFFFF;
+	border: medium solid #7f7f7f;
+}
+
+.contentBody h1 {
+	font-family: "Courier New", Courier, Monospace;
+	color: #8a2be2;
+	border-left: medium solid #8a2be2;
+	padding-left: 1%;
+}
+
+.contentBody h3 {
+	font-family: cabin, sans-serif;
+	font-weight: normal;
+}
+
+.contentBody ul {
+	font-family: cabin, sans-serif;
+	list-style: none;
+}
+
+.contentBody ul li::before {
+	content: "\2022";
+	color: #8a2be2;
+	font-weight: bolder;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	
+}
+
+.contentBody p {
+	font-family: cabin, sans-serif;
+	font-size: 1em;
+	white-space: pre-line;
+}
+
+.slideshowContainer {
+	background-color: white;
+	z-index: 0;
+	width: 100%;
+	margin: 0;
+}
+
+.slideshowContainer img:first-of-type{
+	background-color: white;
+	filter: blur(5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*left: -1000%;
+	right: -1000%;
+	top: -1000%;
+	bottom: -1000%;
+	margin: auto; */
+	object-fit: cover;
+	width: 200%;
+	height: 200%;
+	/*min-width: 100%;
+	min-height: 100%; */
+	z-index: 1;
+}
+.slideshowContainer img { 
+	background-color: white;
+	filter: blur(5px);
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	/* left: -1000%;
+	right: -1000%;
+	top: -1000%;
+	bottom: -1000%; */
+	object-fit: cover;
+	width: 200%;
+	height: 200%;
+}
+
+.tabButtonDiv {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding: 5px 0px;
+	border-bottom: solid medium#7f7f7f;
+}
+
+.unitButton {
+	padding: 16px;
+	border: none;
+}
+
+.unitButton:hover {
+	background: #7f7f7f !important;
+}
+
+.tabContent{
+	display: none;
+}
+
+.tabContent h1 {
+	border: none;
+	text-align: center;
+	padding: 0px;
+	margin: 5px 0px 0px;
+}
+
+.tabContent h2 {
+	text-align: center;
+	font-family: "Courier New", Courier, Monospace;
+	color: #8a2be2;
+}
+
+.socialIcon {
+	position: relative;
+	object-fit: contain;
+	width: 2em;
+	z-index: 0;
+}
+
+#socials {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#socials > a {
+	position: relative;
+	z-index: 9999;
+	padding: 0px 0.5em;
+}
