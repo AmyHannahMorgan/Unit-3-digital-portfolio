@@ -1,9 +1,9 @@
 // JavaScript Document
 
-var images = ['Assets/Images/Slideshow/clouds-countryside-dawn-1107717.jpg',
-			   'Assets/Images/Slideshow/ai-artificial-intelligence-blur-546819.jpg',
-			 'Assets/Images/Slideshow/background-board-card-825262.jpg',
-			 'Assets/Images/Slideshow/abstract-art-artistic-1279813.jpg'],
+var images = ['/Unit-3-digital-portfolio/Assets/Images/Slideshow/clouds-countryside-dawn-1107717.jpg',
+			   '/Unit-3-digital-portfolio/Assets/Images/Slideshow/ai-artificial-intelligence-blur-546819.jpg',
+			 '/Unit-3-digital-portfolio/Assets/Images/Slideshow/background-board-card-825262.jpg',
+			 '/Unit-3-digital-portfolio/Assets/Images/Slideshow/abstract-art-artistic-1279813.jpg'],
 	slideshowImg = document.querySelector('#headerSlideshow').querySelector('.headerSlide').querySelector('img'),
 	slideshowCont = document.querySelector('#headerSlideshow').querySelector('.headerSlide'),
 	count = 0,
